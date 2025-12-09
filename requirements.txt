@@ -1,0 +1,8 @@
+fastapi
+uvicorn
+gunicorn
+sqlmodel
+pymysql
+python-dotenv
+cryptography
+pydantic
