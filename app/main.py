@@ -2,8 +2,7 @@ from fastapi import FastAPI
 from contextlib import asynccontextmanager
 from sqlmodel import SQLModel
 from app.database import engine
-from app.routers import public
-# from app.routers import admin
+from app.routers import license
 
 
 @asynccontextmanager
@@ -13,7 +12,7 @@ async def lifespan(app: FastAPI):
 
 app = FastAPI(title="TKT Multiform Server", lifespan=lifespan)
 
-app.include_router(public.router)
+app.include_router(license.router)
 
 @app.get("/")
 def root():
